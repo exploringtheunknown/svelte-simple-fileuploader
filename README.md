@@ -13,7 +13,7 @@ A very simple Svelte fileuploader Action to put on HTML elements
 ```javascript
 import fileuploader from 'svelte-simple-fileuploader';
 
-	use:fileUploader={options}
+use:fileUploader={options}
 ```
 **options**
 
