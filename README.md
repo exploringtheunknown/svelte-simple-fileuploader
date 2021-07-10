@@ -5,7 +5,7 @@
 
 A very simple Svelte fileuploader Action to put on HTML elements
 
-![Example](https://github.com/nordquist/svelte-simple-fileuploader/blob/main/fileuploader_0.gif?raw=true)
+![Example](https://github.com/nordquist/svelte-simple-fileuploader/blob/main/fileupload_01.gif?raw=true)
 
 
 
