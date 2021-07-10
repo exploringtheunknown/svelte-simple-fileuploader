@@ -1,0 +1,26 @@
+{
+  "name": "svelte-simple-fileuploader",
+  "version": "1.0.0",
+  "description": "A small file uploader lib for Svelte",
+  "main": "fileUploader.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nordquist/svelte-simple-fileuploader.git"
+  },
+  "keywords": [
+    "sveltekit",
+    "svelte",
+    "fileuploader",
+    "queenslab",
+    "happyatwork"
+  ],
+  "author": "Marcus Nordquist",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nordquist/svelte-simple-fileuploader/issues"
+  },
+  "homepage": "https://github.com/nordquist/svelte-simple-fileuploader#readme"
+}
