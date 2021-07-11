@@ -2,8 +2,8 @@ function fileUploader(node, options) {
     const originalBorderStyle = window.getComputedStyle(node).border;
     const originalCursorStyle = window.getComputedStyle(node).cursor;
     const handeMouseOver = () => {
-        console.log(options.implicitStyling);
-        node.style.border = '1px #ccc dashed';
+        var _a;
+        node.style.border = (_a = options.borderStyle) !== null && _a !== void 0 ? _a : '1px #ccc dashed';
         node.style.cursor = 'pointer';
     };
     const handleMouseOut = () => {

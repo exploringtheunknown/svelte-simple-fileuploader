@@ -1,6 +1,6 @@
 {
   "name": "svelte-simple-fileuploader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small file uploader lib for Svelte",
   "main": "index.js",
   "svelte": "src/public.ts",
@@ -20,7 +20,7 @@
     "queenslab",
     "happyatwork"
   ],
-  "author": "Marcus Nordquist",
+  "author": "Nils Kjellman & Marcus Nordquist",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nordquist/svelte-simple-fileuploader/issues"

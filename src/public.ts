@@ -4,6 +4,7 @@ export declare type FileUploaderOptions = {
     implicitStyling?: boolean;
     allowedFileTypes?: string;
     imageCover?: boolean;
+    borderStyle?: string;
 }
 
 export declare type HandleUploadedFilesPropsEventType = CustomEvent & {
@@ -12,15 +13,13 @@ export declare type HandleUploadedFilesPropsEventType = CustomEvent & {
 	id: string;
 };
 
-
 export function fileUploader(node: HTMLElement, options: FileUploaderOptions) {
 
     const originalBorderStyle = window.getComputedStyle(node).border;
     const originalCursorStyle = window.getComputedStyle(node).cursor;
     
     const handeMouseOver = () => {
-        console.log(options.implicitStyling);
-        node.style.border = '1px #ccc dashed';
+        node.style.border = options.borderStyle ?? '1px #ccc dashed';
         node.style.cursor = 'pointer';
     }
     
