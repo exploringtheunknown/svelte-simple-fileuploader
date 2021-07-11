@@ -4,6 +4,7 @@ declare type FileUploaderOptions = {
     implicitStyling?: boolean;
     allowedFileTypes?: string;
     imageCover?: boolean;
+    borderStyle?: string;
 };
 declare type HandleUploadedFilesPropsEventType = CustomEvent & {
     class: string;

@@ -27,9 +27,11 @@ ______________________________________
 
 
 ```
-options = {
-  allowedFileTypes: '.png,.jpg,.jpeg,.pdf', //allowed file types with .
-  imageCover: true //if the image should be used as background on the node
+options =  {
+	allowedFileTypes: '.png,.jpg,.jpeg,.pdf', //allowed file types with .
+	imageCover: true, //if the image should be used as background on the node
+	implicitStyling: true, //if the border and other style should be implicitly applied on hover
+	borderStyle: '1px blue dotted' //explicit border style applied if implicitStyling is false
 }
 ```
 
