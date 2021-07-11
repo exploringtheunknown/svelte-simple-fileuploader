@@ -2,8 +2,11 @@
   "name": "svelte-simple-fileuploader",
   "version": "1.0.0",
   "description": "A small file uploader lib for Svelte",
-  "main": "fileUploader.ts",
+  "main": "index.js",
+  "svelte": "src/public.ts",
   "scripts": {
+    "build": "tsc && rollup -c",
+    "prepublishOnly": "tsc && rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +25,16 @@
   "bugs": {
     "url": "https://github.com/nordquist/svelte-simple-fileuploader/issues"
   },
-  "homepage": "https://github.com/nordquist/svelte-simple-fileuploader#readme"
+  "homepage": "https://github.com/nordquist/svelte-simple-fileuploader#readme",
+  "files": [
+    "src",
+    "dist",
+    "index.js",
+    "index.d.ts"
+  ],
+  "devDependencies": {
+    "rollup": "^2.53.1",
+    "rollup-plugin-dts": "^3.0.2",
+    "typescript": "^4.3.5"
+  }
 }
