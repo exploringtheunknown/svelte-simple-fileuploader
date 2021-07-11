@@ -7,25 +7,27 @@ A very simple Svelte fileuploader Action to put on HTML elements
 
 ![Example](https://github.com/nordquist/svelte-simple-fileuploader/blob/master/fileupload_01.gif?raw=true)
 
-
-
 ## Usage
 ```javascript
 import fileuploader from 'svelte-simple-fileuploader';
 
 use:fileUploader={options}
 ```
+
 **options**
 
-* enabled - Title of the fileuploader \<optional\>
-* dropEnabled - Title of the fileuploader \<optional\>
-* allowedFileTypes - Title of the fileuploader \<optional\>
-* imageCover - Title of the fileuploader \<optional\>
+* enabled - Whether or not to enable component fileupload \<optional\>
+* dropEnabled - Whether or not to allow drop \<optional\>
+* allowedFileTypes - Allowed file endings (including dot) \<optional\>
+* imageCover - Whether or not to have images as background of area when file uploaded \<optional\>
+* implicitStyling - Title of the fileuploader \<optional\>
+* borderStyle - Border style of the drop area on hover \<optional\>
 
 
 ______________________________________
 
 
+*Example options*
 ```
 options =  {
 	allowedFileTypes: '.png,.jpg,.jpeg,.pdf', //allowed file types with .
@@ -35,7 +37,7 @@ options =  {
 }
 ```
 
-*Example*
+*Example usage*
 ```html
 <section id="hero-section"
 	use:fileUploader={{
