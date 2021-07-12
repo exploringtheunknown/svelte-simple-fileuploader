@@ -13,7 +13,14 @@ export declare type HandleUploadedFilesPropsEventType = CustomEvent & {
 	id: string;
 };
 
-export function fileUploader(node: HTMLElement, options: FileUploaderOptions) {
+export default function fileUploader(node: HTMLElement, options: FileUploaderOptions = {
+    enabled: true,
+    dropEnabled: true,
+    implicitStyling: true,
+    imageCover: true,
+    allowedFileTypes: '.png,.jpg,.jpeg,.pdf'
+}) {
+    if(!node) throw new Error("File uploader could not find the hosting node")
 
     const originalBorderStyle = window.getComputedStyle(node).border;
     const originalCursorStyle = window.getComputedStyle(node).cursor;
@@ -47,6 +54,7 @@ export function fileUploader(node: HTMLElement, options: FileUploaderOptions) {
     };
     
     const handleMouseDown = (event: MouseEvent) => {
+        if (!options.enabled) return;
         if (event.target != node) {
             event.stopPropagation();
             return;
@@ -64,6 +72,7 @@ export function fileUploader(node: HTMLElement, options: FileUploaderOptions) {
     };
     
     const handleDrop = (event: DragEvent) => {
+        if (!options.dropEnabled) return;
         const dt = event.dataTransfer;
         const files = dt.files;
         handleUpload(files);

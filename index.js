@@ -1,4 +1,12 @@
-function fileUploader(node, options) {
+export default function fileUploader(node, options = {
+    enabled: true,
+    dropEnabled: true,
+    implicitStyling: true,
+    imageCover: true,
+    allowedFileTypes: '.png,.jpg,.jpeg,.pdf'
+}) {
+    if (!node)
+        throw new Error("File uploader could not find the hosting node");
     const originalBorderStyle = window.getComputedStyle(node).border;
     const originalCursorStyle = window.getComputedStyle(node).cursor;
     const handeMouseOver = () => {
@@ -23,6 +31,8 @@ function fileUploader(node, options) {
         }
     };
     const handleMouseDown = (event) => {
+        if (!options.enabled)
+            return;
         if (event.target != node) {
             event.stopPropagation();
             return;
@@ -38,6 +48,8 @@ function fileUploader(node, options) {
         f.click();
     };
     const handleDrop = (event) => {
+        if (!options.dropEnabled)
+            return;
         const dt = event.dataTransfer;
         const files = dt.files;
         handleUpload(files);
@@ -68,5 +80,3 @@ function fileUploader(node, options) {
         }
     };
 }
-
-export { fileUploader };

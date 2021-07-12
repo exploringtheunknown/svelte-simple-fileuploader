@@ -20,7 +20,7 @@ use:fileUploader={options}
 * dropEnabled - Whether or not to allow drop \<optional\>
 * allowedFileTypes - Allowed file endings (including dot) \<optional\>
 * imageCover - Whether or not to have images as background of area when file uploaded \<optional\>
-* implicitStyling - Title of the fileuploader \<optional\>
+* implicitStyling - Use styling set implicitly by this component, set to false if you want to implement your own styling \<optional\>
 * borderStyle - Border style of the drop area on hover \<optional\>
 
 
@@ -44,6 +44,15 @@ options =  {
 		allowedFileTypes: '.png,.jpg,.jpeg,.pdf',
 		imageCover: true
 	}}
+	on:filesUploaded={handleUploadedFiles}
+>
+</section>
+```
+
+All options are optional, this example will load sensible defaults
+```html
+<section id="hero-section"
+	use:fileUploader
 	on:filesUploaded={handleUploadedFiles}
 >
 </section>

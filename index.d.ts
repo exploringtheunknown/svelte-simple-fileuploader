@@ -1,4 +1,4 @@
-declare type FileUploaderOptions = {
+export declare type FileUploaderOptions = {
     enabled?: boolean;
     dropEnabled?: boolean;
     implicitStyling?: boolean;
@@ -6,13 +6,11 @@ declare type FileUploaderOptions = {
     imageCover?: boolean;
     borderStyle?: string;
 };
-declare type HandleUploadedFilesPropsEventType = CustomEvent & {
+export declare type HandleUploadedFilesPropsEventType = CustomEvent & {
     class: string;
     onfilesUploaded: (event: CustomEvent) => Promise<void>;
     id: string;
 };
-declare function fileUploader(node: HTMLElement, options: FileUploaderOptions): {
+export default function fileUploader(node: HTMLElement, options?: FileUploaderOptions): {
     destroy(): void;
 };
-
-export { FileUploaderOptions, HandleUploadedFilesPropsEventType, fileUploader };
