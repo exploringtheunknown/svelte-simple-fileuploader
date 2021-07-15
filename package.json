@@ -28,7 +28,7 @@
   "homepage": "https://github.com/nordquist/svelte-simple-fileuploader#readme",
   "files": [
     "index.js",
-    "infex.ts",
+    "index.ts",
     "index.d.ts"
   ],
   "devDependencies": {
