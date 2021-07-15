@@ -1,6 +1,6 @@
 {
   "name": "svelte-simple-fileuploader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A small file uploader lib for Svelte",
   "main": "index.js",
   "svelte": "index.ts",
@@ -30,6 +30,7 @@
     "src",
     "dist",
     "index.js",
+    "infex.ts",
     "index.d.ts"
   ],
   "devDependencies": {
