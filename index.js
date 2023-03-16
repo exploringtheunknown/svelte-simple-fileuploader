@@ -9,7 +9,7 @@ export default function fileUploader(node, options = {
         throw new Error("File uploader could not find the hosting node");
     const originalBorderStyle = window.getComputedStyle(node).border;
     const originalCursorStyle = window.getComputedStyle(node).cursor;
-    const handeMouseOver = () => {
+    const handleMouseOver = () => {
         var _a;
         node.style.border = (_a = options.borderStyle) !== null && _a !== void 0 ? _a : '1px #ccc dashed';
         node.style.cursor = 'pointer';
@@ -58,9 +58,9 @@ export default function fileUploader(node, options = {
         e.preventDefault();
     };
     if (options.implicitStyling) {
-        node.addEventListener('mouseover', handeMouseOver);
+        node.addEventListener('mouseover', handleMouseOver);
         node.addEventListener('mouseout', handleMouseOut);
-        node.addEventListener('dragenter', handeMouseOver);
+        node.addEventListener('dragenter', handleMouseOver);
         node.addEventListener('dragleave', handleMouseOut);
     }
     node.addEventListener('mousedown', handleMouseDown);
@@ -70,9 +70,9 @@ export default function fileUploader(node, options = {
     return {
         destroy() {
             if (options.implicitStyling) {
-                node.removeEventListener('mouseover', handeMouseOver);
+                node.removeEventListener('mouseover', handleMouseOver);
                 node.removeEventListener('mouseout', handleMouseOut);
-                node.removeEventListener('dragenter', handeMouseOver);
+                node.removeEventListener('dragenter', handleMouseOver);
                 node.removeEventListener('dragleave', handleMouseOut);
             }
             node.removeEventListener('mousedown', handleMouseDown);
