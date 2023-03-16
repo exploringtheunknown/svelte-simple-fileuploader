@@ -25,7 +25,7 @@ export default function fileUploader(node: HTMLElement, options: FileUploaderOpt
     const originalBorderStyle = window.getComputedStyle(node).border;
     const originalCursorStyle = window.getComputedStyle(node).cursor;
     
-    const handeMouseOver = () => {
+    const handleMouseOver = () => {
         node.style.border = options.borderStyle ?? '1px #ccc dashed';
         node.style.cursor = 'pointer';
     }
@@ -83,9 +83,9 @@ export default function fileUploader(node: HTMLElement, options: FileUploaderOpt
     };
 
     if (options.implicitStyling) {
-        node.addEventListener('mouseover', handeMouseOver);
+        node.addEventListener('mouseover', handleMouseOver);
         node.addEventListener('mouseout', handleMouseOut);
-        node.addEventListener('dragenter', handeMouseOver);
+        node.addEventListener('dragenter', handleMouseOver);
         node.addEventListener('dragleave', handleMouseOut);
     }
     
@@ -99,9 +99,9 @@ export default function fileUploader(node: HTMLElement, options: FileUploaderOpt
 	return {
 		destroy() {
             if (options.implicitStyling) {
-                node.removeEventListener('mouseover', handeMouseOver);
+                node.removeEventListener('mouseover', handleMouseOver);
                 node.removeEventListener('mouseout', handleMouseOut);
-                node.removeEventListener('dragenter', handeMouseOver);
+                node.removeEventListener('dragenter', handleMouseOver);
                 node.removeEventListener('dragleave', handleMouseOut);
             }
 			node.removeEventListener('mousedown', handleMouseDown);
